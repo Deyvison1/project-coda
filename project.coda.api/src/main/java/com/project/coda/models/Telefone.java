@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,12 +12,12 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@Table(name = "ModelTeste")
-public class ModelTeste {
-
+public class Telefone {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Long Id;
-	public String Nome;
+	private Long id;
+	private EnumUF uf;
+	private int numero;
+	private boolean preferencial = false;
 }
